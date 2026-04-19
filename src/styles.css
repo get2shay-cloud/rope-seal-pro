@@ -1,8 +1,25 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;500;600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Heebo", "Assistant", system-ui, sans-serif;
+  --font-display: "Assistant", "Heebo", sans-serif;
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-deep: var(--brand-deep);
+  --color-steel: var(--steel);
+  --color-steel-foreground: var(--steel-foreground);
+  --gradient-hero: var(--gradient-hero);
+  --gradient-brand: var(--gradient-brand);
+  --shadow-elegant: var(--shadow-elegant);
+  --shadow-glow: var(--shadow-glow);
+  --shadow-card: var(--shadow-card);
+  --transition-smooth: var(--transition-smooth);
+}
 
 /*
  * Design system definition.
@@ -62,9 +79,22 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.18 0.04 250);
+
+  --brand: oklch(0.38 0.17 255);
+  --brand-foreground: oklch(0.99 0 0);
+  --brand-deep: oklch(0.24 0.13 258);
+  --steel: oklch(0.55 0.02 250);
+  --steel-foreground: oklch(0.99 0 0);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.24 0.13 258) 0%, oklch(0.32 0.15 256) 50%, oklch(0.42 0.17 255) 100%);
+  --gradient-brand: linear-gradient(135deg, oklch(0.38 0.17 255), oklch(0.48 0.18 252));
+  --shadow-elegant: 0 20px 50px -20px oklch(0.24 0.13 258 / 0.35);
+  --shadow-glow: 0 0 60px oklch(0.48 0.18 252 / 0.4);
+  --shadow-card: 0 8px 30px -10px oklch(0.24 0.13 258 / 0.18);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -140,5 +170,10 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  html {
+    direction: rtl;
   }
 }
