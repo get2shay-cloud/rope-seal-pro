@@ -27,8 +27,11 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/972500000000?text=" + encodeURIComponent("שלום, אשמח לקבל הצעת מחיר לאיטום בסנפלינג");
-const PHONE = "tel:+972500000000";
+const WHATSAPP = "https://wa.me/972525472518?text=" + encodeURIComponent("שלום, אשמח לקבל הצעת מחיר לאיטום בסנפלינג");
+const PHONE = "tel:+972525472518";
+const EMAIL = "Get2Shay@Gmail.com";
+const PHONE_DISPLAY = "052-547-2518";
+const SERVICE_AREA = "שירות בכל צפון הארץ";
 
 function Index() {
   return (
