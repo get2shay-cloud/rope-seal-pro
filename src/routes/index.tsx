@@ -56,8 +56,8 @@ function Header() {
         <a href="#" className="flex items-center gap-2 text-white">
           <div className="size-9 rounded-lg bg-white/10 backdrop-blur flex items-center justify-center ring-1 ring-white/20">
             <Building2 className="size-5" />
-          </div>
-          <span className="font-display font-bold text-lg tracking-tight">סנפלינג איטום</span>
+          </div>שי ביצוע בגובה
+          <span className="font-display font-bold text-lg tracking-tight">ם</span>
         </a>
         <a
           href={PHONE}
@@ -349,7 +349,7 @@ function Footer() {
               <div className="size-9 rounded-lg bg-white/10 flex items-center justify-center ring-1 ring-white/20">
                 <Building2 className="size-5" />
               </div>
-              <span className="font-display font-bold text-lg">סנפלינג איטום</span>
+              <span className="font-display font-bold text-lg">שי ביצוע בגובה</span>
             </div>
             <p className="text-sm leading-relaxed">
               מומחי איטום קירות חיצוניים בשיטת הסנפלינג. שירות מקצועי, מהיר ובטוח לבניינים בכל הגבהים.
@@ -374,7 +374,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-6 border-t border-white/10 text-sm text-center text-white/60">
-          © {new Date().getFullYear()} סנפלינג איטום. כל הזכויות שמורות.
+          © {new Date().getFullYear()}כל הזכויות שמורות שי ביצוע בגובה
         </div>
       </div>
     </footer>
