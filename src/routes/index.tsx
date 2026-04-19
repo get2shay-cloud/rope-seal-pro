@@ -282,9 +282,9 @@ function ContactForm() {
             </p>
             <div className="space-y-4">
               {[
-                { icon: Phone, text: "050-000-0000", href: PHONE },
-                { icon: Mail, text: "info@sealing.co.il", href: "mailto:info@sealing.co.il" },
-                { icon: MapPin, text: "שירות בכל הארץ", href: "#" },
+                { icon: Phone, text: PHONE_DISPLAY, href: PHONE },
+                { icon: Mail, text: EMAIL, href: `mailto:${EMAIL}` },
+                { icon: MapPin, text: SERVICE_AREA, href: "#" },
               ].map((c) => (
                 <a key={c.text} href={c.href} className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth">
                   <div className="size-10 rounded-lg bg-background flex items-center justify-center shadow-card">
@@ -358,9 +358,9 @@ function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">צרו קשר</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href={PHONE} className="hover:text-white">050-000-0000</a></li>
-              <li><a href="mailto:info@sealing.co.il" className="hover:text-white">info@sealing.co.il</a></li>
-              <li>שירות בכל הארץ</li>
+              <li><a href={PHONE} className="hover:text-white">{PHONE_DISPLAY}</a></li>
+              <li><a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a></li>
+              <li>{SERVICE_AREA}</li>
             </ul>
           </div>
           <div>
