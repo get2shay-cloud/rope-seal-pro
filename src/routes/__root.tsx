@@ -29,21 +29,21 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
+      { title: "איטום קירות חיצוניים בסנפלינג | פתרון סופי לנזילות ורטיבות" },
       {
-        rel: "stylesheet",
-        href: appCss,
+        name: "description",
+        content:
+          "מומחי איטום וסנפלינג לבניינים גבוהים. פתרון סופי לנזילות ורטיבות בקירות חיצוניים, חלונות ובטון. אחריות 10 שנים, ביטוח מלא וטכנאים מוסמכים.",
       },
+      { property: "og:title", content: "איטום קירות חיצוניים בסנפלינג – פתרון סופי לנזילות" },
+      {
+        property: "og:description",
+        content: "מומחי איטום בסנפלינג עם 10 שנות אחריות, ללא פיגומים, מהיר ומדויק.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -52,7 +52,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="he" dir="rtl">
       <head>
         <HeadContent />
       </head>
