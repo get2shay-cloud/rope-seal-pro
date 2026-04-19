@@ -229,7 +229,7 @@ function Services() {
 
 function TrustBar() {
   const items = [
-    { icon: BadgeCheck, title: "טכנאי גובה מוסמכים", desc: "תעודות הסמכה בתוקף ממשרד העבודה ומכון התקנים" },
+    { icon: BadgeCheck, title: "טכנאי גובה מוסמכים", desc: "תעודות הסמכה בתוקף ממשרד העבודה" },
     { icon: ShieldCheck, title: "ביטוח אחריות מלא", desc: "כיסוי ביטוחי לעבודה ולצד שלישי" },
     { icon: Target, title: "10 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
   ];
