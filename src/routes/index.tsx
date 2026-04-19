@@ -3,13 +3,13 @@ import { useState } from "react";
 import {
   Droplets,
   Zap,
-  ShieldCheck,
   Target,
   Building2,
   SquaresExclude,
   Hammer,
   Layers,
   BadgeCheck,
+  HardHat,
   Phone,
   MessageCircle,
   Mail,
@@ -230,7 +230,7 @@ function Services() {
 function TrustBar() {
   const items = [
     { icon: BadgeCheck, title: "טכנאי גובה מוסמכים", desc: "תעודות הסמכה בתוקף ממשרד העבודה" },
-    { icon: ShieldCheck, title: "ביטוח אחריות מלא", desc: "כיסוי ביטוחי לעבודה ולצד שלישי" },
+    { icon: HardHat, title: "ציוד תקני ומאושר", desc: "ציוד גלישה ובטיחות העומד בכל התקנים והתקנות" },
     { icon: Target, title: "10 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
   ];
   return (
