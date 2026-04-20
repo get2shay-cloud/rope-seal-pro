@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP = "https://wa.me/972525472518?text=" + encodeURIComponent("שלום, אשמח לקבל הצעת מחיר לאיטום בסנפלינג");
 const PHONE = "tel:+972525472518";
-const EMAIL = "Get2Shay@Gmail.com";
+const EMAIL = "Get2Shay@gmail.com";
 const PHONE_DISPLAY = "052-547-2518";
 const SERVICE_AREA = "שירות בכל צפון הארץ";
 
@@ -93,7 +93,7 @@ function Hero() {
         <div className="max-w-3xl text-white">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 ring-1 ring-white/20 text-sm mb-6">
             <BadgeCheck className="size-4" />
-            10 שנות אחריות בכתב
+            5 שנות אחריות בכתב
           </div>
           <h1 className="font-display font-extrabold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
             פתרון סופי לנזילות ורטיבות –
@@ -130,7 +130,7 @@ function Hero() {
             {[
               { n: "+10", l: "שנות ניסיון" },
               { n: "500+", l: "בניינים" },
-              { n: "10", l: "שנות אחריות" },
+              { n: "5", l: "שנות אחריות" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display font-extrabold text-3xl">{s.n}</div>
@@ -234,7 +234,7 @@ function TrustBar() {
   const items = [
     { icon: BadgeCheck, title: "טכנאי גובה מוסמכים", desc: "תעודות הסמכה בתוקף ממשרד העבודה" },
     { icon: HardHat, title: "ציוד תקני ומאושר", desc: "ציוד גלישה ובטיחות העומד בכל התקנים והתקנות" },
-    { icon: Target, title: "10 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
+    { icon: Target, title: "5 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
   ];
   return (
     <section className="py-16" style={{ background: "var(--gradient-hero)" }}>
