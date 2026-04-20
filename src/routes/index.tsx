@@ -390,15 +390,25 @@ function Footer() {
 
 function FloatingWhatsApp() {
   return (
-    <a
-      href={WHATSAPP}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="צור קשר בוואטסאפ"
-      className="fixed bottom-6 left-6 z-50 size-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
-    >
-      <MessageCircle className="size-7" />
-      <span className="absolute inset-0 rounded-full animate-ping bg-[#25D366] opacity-30" />
-    </a>
+    <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+      <a
+        href={WHATSAPP}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="צור קשר בוואטסאפ"
+        className="relative size-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
+      >
+        <MessageCircle className="size-7" />
+        <span className="absolute inset-0 rounded-full animate-ping bg-[#25D366] opacity-30" />
+      </a>
+      <a
+        href={PHONE}
+        aria-label="התקשר עכשיו"
+        className="relative size-14 rounded-full bg-brand hover:opacity-90 text-brand-foreground flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
+      >
+        <Phone className="size-7" />
+        <span className="absolute inset-0 rounded-full animate-ping bg-brand opacity-30" />
+      </a>
+    </div>
   );
 }
