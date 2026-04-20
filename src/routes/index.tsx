@@ -84,14 +84,14 @@ function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(270deg, oklch(0.17 0.1 258 / 0.94) 0%, oklch(0.19 0.11 258 / 0.82) 40%, oklch(0.22 0.12 258 / 0.6) 75%, oklch(0.24 0.13 258 / 0.45) 100%)",
+              "linear-gradient(270deg, oklch(0.15 0.09 258 / 0.97) 0%, oklch(0.17 0.1 258 / 0.9) 35%, oklch(0.2 0.12 258 / 0.7) 70%, oklch(0.22 0.12 258 / 0.55) 100%)",
           }}
         />
         <div
           className="absolute inset-0 sm:hidden"
           style={{
             background:
-              "linear-gradient(180deg, oklch(0.16 0.09 258 / 0.35) 0%, oklch(0.16 0.09 258 / 0.1) 50%, oklch(0.16 0.09 258 / 0.45) 100%)",
+              "linear-gradient(180deg, oklch(0.15 0.09 258 / 0.5) 0%, oklch(0.15 0.09 258 / 0.2) 50%, oklch(0.15 0.09 258 / 0.6) 100%)",
           }}
         />
       </div>
