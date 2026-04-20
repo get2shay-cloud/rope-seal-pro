@@ -103,7 +103,7 @@ function Hero() {
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
             צוות מקצועי של טכנאי גובה מוסמכים, עם מעל עשור של ניסיון באיטום בניינים גבוהים.
-            עבודה מהירה ומדויקת ללא צורך בפיגומים – אחריות מלאה ל-10 שנים.
+            עבודה מהירה ומדויקת ללא צורך בפיגומים – אחריות מלאה ל-5 שנים.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
