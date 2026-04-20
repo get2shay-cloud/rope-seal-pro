@@ -78,13 +78,13 @@ function Hero() {
         <img
           src={heroImg}
           alt="טכנאי סנפלינג מאטם קיר חיצוני של בניין גבוה"
-          className="w-full h-full object-cover object-[30%_center] sm:object-[40%_center]"
+          className="w-full h-full object-cover object-[78%_center] sm:object-[60%_center] lg:object-[50%_center]"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(270deg, oklch(0.18 0.1 258 / 0.96) 0%, oklch(0.2 0.12 258 / 0.85) 45%, oklch(0.24 0.13 258 / 0.45) 100%)",
+              "linear-gradient(270deg, oklch(0.18 0.1 258 / 0.92) 0%, oklch(0.2 0.12 258 / 0.75) 45%, oklch(0.24 0.13 258 / 0.5) 100%)",
           }}
         />
       </div>
