@@ -56,8 +56,8 @@ function Header() {
         <a href="#" className="flex items-center gap-2 text-white">
           <div className="size-9 rounded-lg bg-white/10 backdrop-blur flex items-center justify-center ring-1 ring-white/20">
             <Building2 className="size-5" />
-          </div>שי ביצוע בגובה
-          <span className="font-display font-bold text-lg tracking-tight">ם</span>
+          </div>
+          <span className="font-display font-bold text-lg tracking-tight">שי ביצוע בגובה</span>
         </a>
         <a
           href={PHONE}
