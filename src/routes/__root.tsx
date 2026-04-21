@@ -50,6 +50,13 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RapLoX7SMAghrGbUUoHssbU98KG2/social-images/social-1776675144386-IMG-20240421-WA0002.webp" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
+    scripts: [
+      { src: "https://www.googletagmanager.com/gtag/js?id=AW-18106205849", async: true },
+      {
+        children:
+          "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'AW-18106205849');",
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
