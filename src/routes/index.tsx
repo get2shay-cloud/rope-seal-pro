@@ -310,7 +310,12 @@ function ContactForm() {
                 { icon: Mail, text: EMAIL, href: `mailto:${EMAIL}` },
                 { icon: MapPin, text: SERVICE_AREA, href: "#" },
               ].map((c) => (
-                <a key={c.text} href={c.href} className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth">
+                <a
+                  key={c.text}
+                  href={c.href}
+                  onClick={c.href === PHONE ? () => trackConversion("phone") : undefined}
+                  className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth"
+                >
                   <div className="size-10 rounded-lg bg-background flex items-center justify-center shadow-card">
                     <c.icon className="size-5 text-brand" />
                   </div>
