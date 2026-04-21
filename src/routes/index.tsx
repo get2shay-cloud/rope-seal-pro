@@ -400,7 +400,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">צרו קשר</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href={PHONE} onClick={() => trackConversion("phone")} className="hover:text-white">{PHONE_DISPLAY}</a></li>
+              <li><a href={PHONE} onClick={(e) => { e.preventDefault(); gtagReportConversion(PHONE); }} className="hover:text-white">{PHONE_DISPLAY}</a></li>
               <li><a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a></li>
               <li>{SERVICE_AREA}</li>
             </ul>
