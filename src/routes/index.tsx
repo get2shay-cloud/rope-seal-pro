@@ -39,14 +39,27 @@ declare global {
   }
 }
 
-const trackConversion = (source: "phone" | "whatsapp") => {
+const gtagReportConversion = (url?: string, target?: string) => {
+  const navigate = () => {
+    if (url) {
+      if (target === "_blank") {
+        window.open(url, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.href = url;
+      }
+    }
+  };
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "conversion", {
       send_to: "AW-18106205849/Exb-CLL23Z8cEJmN27lD",
-      event_category: "contact",
-      event_label: source,
+      event_callback: navigate,
     });
+    // Fallback in case gtag never fires the callback (blocked, slow network)
+    window.setTimeout(navigate, 1500);
+  } else {
+    navigate();
   }
+  return false;
 };
 
 function Index() {
