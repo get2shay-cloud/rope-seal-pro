@@ -145,7 +145,7 @@ function Hero() {
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <Button asChild size="lg" className="h-14 px-7 text-base font-bold bg-[#25D366] hover:bg-[#1ebe5a] text-white shadow-glow">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion("whatsapp")}>
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); gtagReportConversion(WHATSAPP, "_blank"); }}>
                 <MessageCircle className="size-5" />
                 שיחה מיידית בוואטסאפ
               </a>
