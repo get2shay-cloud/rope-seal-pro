@@ -51,7 +51,7 @@ const gtagReportConversion = (url?: string, target?: string) => {
   };
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "conversion", {
-      send_to: "AW-18106205849/Exb-CLL23Z8cEJmN27lD",
+      send_to: "AW-18106205849/8yZjCKLA-Z8cEJmN27lD",
       event_callback: navigate,
     });
     // Fallback in case gtag never fires the callback (blocked, slow network)
