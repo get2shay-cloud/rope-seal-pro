@@ -53,6 +53,7 @@ export function AnimatedStat({
     <span
       ref={ref}
       className="inline-block"
+      dir="ltr"
       style={mode === "pulse" && pulse ? { animation: "pulseGrow 0.9s ease-out" } : undefined}
     >
       {prefix}
