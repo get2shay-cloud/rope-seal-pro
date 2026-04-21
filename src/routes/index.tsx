@@ -439,7 +439,7 @@ function FloatingWhatsApp() {
       </a>
       <a
         href={PHONE}
-        onClick={() => trackConversion("phone")}
+        onClick={(e) => { e.preventDefault(); gtagReportConversion(PHONE); }}
         aria-label="התקשר עכשיו"
         className="relative size-14 rounded-full bg-brand hover:opacity-90 text-brand-foreground flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
