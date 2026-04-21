@@ -42,7 +42,7 @@ declare global {
 const trackConversion = (source: "phone" | "whatsapp") => {
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "conversion", {
-      send_to: "AW-18106205849",
+      send_to: "AW-18106205849/Exb-CLL23Z8cEJmN27lD",
       event_category: "contact",
       event_label: source,
     });
