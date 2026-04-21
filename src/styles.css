@@ -177,3 +177,9 @@
     direction: rtl;
   }
 }
+
+@keyframes pulseGrow {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}

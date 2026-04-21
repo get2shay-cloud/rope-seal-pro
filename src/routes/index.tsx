@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Droplets,
   Zap,
@@ -61,6 +61,68 @@ const gtagReportConversion = (url?: string, target?: string) => {
   }
   return false;
 };
+
+function AnimatedStat({
+  value,
+  prefix = "",
+  suffix = "",
+  mode = "count",
+  duration = 1800,
+}: {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  mode?: "count" | "pulse";
+  duration?: number;
+}) {
+  const [display, setDisplay] = useState(mode === "count" ? 0 : value);
+  const [pulse, setPulse] = useState(false);
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !started.current) {
+            started.current = true;
+            if (mode === "count") {
+              const start = performance.now();
+              const tick = (now: number) => {
+                const p = Math.min(1, (now - start) / duration);
+                const eased = 1 - Math.pow(1 - p, 3);
+                setDisplay(Math.round(eased * value));
+                if (p < 1) requestAnimationFrame(tick);
+              };
+              requestAnimationFrame(tick);
+            } else {
+              setPulse(true);
+              setTimeout(() => setPulse(false), 900);
+            }
+            io.disconnect();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [value, duration, mode]);
+
+  return (
+    <span
+      ref={ref}
+      className={mode === "pulse" ? (pulse ? "inline-block animate-scale-in" : "inline-block") : "inline-block"}
+      style={mode === "pulse" && pulse ? { animation: "pulseGrow 0.9s ease-out" } : undefined}
+    >
+      {prefix}
+      {display}
+      {suffix}
+    </span>
+  );
+}
 
 function Index() {
   return (
@@ -165,12 +227,14 @@ function Hero() {
 
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             {[
-              { n: "+10", l: "שנות ניסיון" },
-              { n: "500+", l: "בניינים" },
-              { n: "5", l: "שנות אחריות" },
+              { n: 10, l: "שנות ניסיון", prefix: "+", mode: "count" as const },
+              { n: 500, l: "בניינים", suffix: "+", mode: "count" as const },
+              { n: 5, l: "שנות אחריות", mode: "pulse" as const },
             ].map((s) => (
               <div key={s.l}>
-                <div className="font-display font-extrabold text-3xl">{s.n}</div>
+                <div className="font-display font-extrabold text-3xl">
+                  <AnimatedStat value={s.n} prefix={s.prefix} suffix={s.suffix} mode={s.mode} />
+                </div>
                 <div className="text-sm text-white/70 mt-1">{s.l}</div>
               </div>
             ))}
