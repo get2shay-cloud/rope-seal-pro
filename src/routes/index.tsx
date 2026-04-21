@@ -326,7 +326,7 @@ function ContactForm() {
                 <a
                   key={c.text}
                   href={c.href}
-                  onClick={c.href === PHONE ? () => trackConversion("phone") : undefined}
+                  onClick={c.href === PHONE ? (e) => { e.preventDefault(); gtagReportConversion(PHONE); } : undefined}
                   className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth"
                 >
                   <div className="size-10 rounded-lg bg-background flex items-center justify-center shadow-card">
