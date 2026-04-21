@@ -39,14 +39,27 @@ declare global {
   }
 }
 
-const trackConversion = (source: "phone" | "whatsapp") => {
+const gtagReportConversion = (url?: string, target?: string) => {
+  const navigate = () => {
+    if (url) {
+      if (target === "_blank") {
+        window.open(url, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.href = url;
+      }
+    }
+  };
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "conversion", {
       send_to: "AW-18106205849/Exb-CLL23Z8cEJmN27lD",
-      event_category: "contact",
-      event_label: source,
+      event_callback: navigate,
     });
+    // Fallback in case gtag never fires the callback (blocked, slow network)
+    window.setTimeout(navigate, 1500);
+  } else {
+    navigate();
   }
+  return false;
 };
 
 function Index() {
@@ -77,7 +90,7 @@ function Header() {
         </a>
         <a
           href={PHONE}
-          onClick={() => trackConversion("phone")}
+          onClick={(e) => { e.preventDefault(); gtagReportConversion(PHONE); }}
           className="hidden sm:inline-flex flex-row-reverse items-center gap-2 text-white/90 hover:text-white text-sm font-medium"
         >
           <Phone className="size-4" />
@@ -132,7 +145,7 @@ function Hero() {
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <Button asChild size="lg" className="h-14 px-7 text-base font-bold bg-[#25D366] hover:bg-[#1ebe5a] text-white shadow-glow">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion("whatsapp")}>
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); gtagReportConversion(WHATSAPP, "_blank"); }}>
                 <MessageCircle className="size-5" />
                 שיחה מיידית בוואטסאפ
               </a>
@@ -313,7 +326,7 @@ function ContactForm() {
                 <a
                   key={c.text}
                   href={c.href}
-                  onClick={c.href === PHONE ? () => trackConversion("phone") : undefined}
+                  onClick={c.href === PHONE ? (e) => { e.preventDefault(); gtagReportConversion(PHONE); } : undefined}
                   className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth"
                 >
                   <div className="size-10 rounded-lg bg-background flex items-center justify-center shadow-card">
@@ -387,7 +400,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">צרו קשר</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href={PHONE} onClick={() => trackConversion("phone")} className="hover:text-white">{PHONE_DISPLAY}</a></li>
+              <li><a href={PHONE} onClick={(e) => { e.preventDefault(); gtagReportConversion(PHONE); }} className="hover:text-white">{PHONE_DISPLAY}</a></li>
               <li><a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a></li>
               <li>{SERVICE_AREA}</li>
             </ul>
@@ -417,7 +430,7 @@ function FloatingWhatsApp() {
         href={WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackConversion("whatsapp")}
+        onClick={(e) => { e.preventDefault(); gtagReportConversion(WHATSAPP, "_blank"); }}
         aria-label="צור קשר בוואטסאפ"
         className="relative size-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
@@ -426,7 +439,7 @@ function FloatingWhatsApp() {
       </a>
       <a
         href={PHONE}
-        onClick={() => trackConversion("phone")}
+        onClick={(e) => { e.preventDefault(); gtagReportConversion(PHONE); }}
         aria-label="התקשר עכשיו"
         className="relative size-14 rounded-full bg-brand hover:opacity-90 text-brand-foreground flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
