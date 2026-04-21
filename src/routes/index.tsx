@@ -77,6 +77,7 @@ function Header() {
         </a>
         <a
           href={PHONE}
+          onClick={() => trackConversion("phone")}
           className="hidden sm:inline-flex flex-row-reverse items-center gap-2 text-white/90 hover:text-white text-sm font-medium"
         >
           <Phone className="size-4" />
