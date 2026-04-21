@@ -33,6 +33,22 @@ const EMAIL = "Get2Shay@gmail.com";
 const PHONE_DISPLAY = "052-547-2518";
 const SERVICE_AREA = "שירות בכל צפון הארץ";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const trackConversion = (source: "phone" | "whatsapp") => {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "conversion", {
+      send_to: "AW-18106205849",
+      event_category: "contact",
+      event_label: source,
+    });
+  }
+};
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
@@ -61,6 +77,7 @@ function Header() {
         </a>
         <a
           href={PHONE}
+          onClick={() => trackConversion("phone")}
           className="hidden sm:inline-flex flex-row-reverse items-center gap-2 text-white/90 hover:text-white text-sm font-medium"
         >
           <Phone className="size-4" />
@@ -115,7 +132,7 @@ function Hero() {
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <Button asChild size="lg" className="h-14 px-7 text-base font-bold bg-[#25D366] hover:bg-[#1ebe5a] text-white shadow-glow">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion("whatsapp")}>
                 <MessageCircle className="size-5" />
                 שיחה מיידית בוואטסאפ
               </a>
@@ -293,7 +310,12 @@ function ContactForm() {
                 { icon: Mail, text: EMAIL, href: `mailto:${EMAIL}` },
                 { icon: MapPin, text: SERVICE_AREA, href: "#" },
               ].map((c) => (
-                <a key={c.text} href={c.href} className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth">
+                <a
+                  key={c.text}
+                  href={c.href}
+                  onClick={c.href === PHONE ? () => trackConversion("phone") : undefined}
+                  className="flex items-center gap-3 text-foreground hover:text-brand transition-smooth"
+                >
                   <div className="size-10 rounded-lg bg-background flex items-center justify-center shadow-card">
                     <c.icon className="size-5 text-brand" />
                   </div>
@@ -365,7 +387,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">צרו קשר</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href={PHONE} className="hover:text-white">{PHONE_DISPLAY}</a></li>
+              <li><a href={PHONE} onClick={() => trackConversion("phone")} className="hover:text-white">{PHONE_DISPLAY}</a></li>
               <li><a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a></li>
               <li>{SERVICE_AREA}</li>
             </ul>
@@ -395,6 +417,7 @@ function FloatingWhatsApp() {
         href={WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackConversion("whatsapp")}
         aria-label="צור קשר בוואטסאפ"
         className="relative size-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
@@ -403,6 +426,7 @@ function FloatingWhatsApp() {
       </a>
       <a
         href={PHONE}
+        onClick={() => trackConversion("phone")}
         aria-label="התקשר עכשיו"
         className="relative size-14 rounded-full bg-brand hover:opacity-90 text-brand-foreground flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
