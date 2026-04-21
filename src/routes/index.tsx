@@ -33,6 +33,22 @@ const EMAIL = "Get2Shay@gmail.com";
 const PHONE_DISPLAY = "052-547-2518";
 const SERVICE_AREA = "שירות בכל צפון הארץ";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const trackConversion = (source: "phone" | "whatsapp") => {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "conversion", {
+      send_to: "AW-18106205849",
+      event_category: "contact",
+      event_label: source,
+    });
+  }
+};
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
