@@ -417,6 +417,7 @@ function FloatingWhatsApp() {
         href={WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackConversion("whatsapp")}
         aria-label="צור קשר בוואטסאפ"
         className="relative size-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
@@ -425,6 +426,7 @@ function FloatingWhatsApp() {
       </a>
       <a
         href={PHONE}
+        onClick={() => trackConversion("phone")}
         aria-label="התקשר עכשיו"
         className="relative size-14 rounded-full bg-brand hover:opacity-90 text-brand-foreground flex items-center justify-center shadow-glow transition-smooth hover:scale-110"
       >
