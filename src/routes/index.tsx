@@ -165,12 +165,14 @@ function Hero() {
 
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             {[
-              { n: "+10", l: "שנות ניסיון" },
-              { n: "500+", l: "בניינים" },
-              { n: "5", l: "שנות אחריות" },
+              { n: 10, l: "שנות ניסיון", prefix: "+", mode: "count" as const },
+              { n: 500, l: "בניינים", suffix: "+", mode: "count" as const },
+              { n: 5, l: "שנות אחריות", mode: "pulse" as const },
             ].map((s) => (
               <div key={s.l}>
-                <div className="font-display font-extrabold text-3xl">{s.n}</div>
+                <div className="font-display font-extrabold text-3xl">
+                  <AnimatedStat value={s.n} prefix={s.prefix} suffix={s.suffix} mode={s.mode} />
+                </div>
                 <div className="text-sm text-white/70 mt-1">{s.l}</div>
               </div>
             ))}
