@@ -414,7 +414,7 @@ function Footer() {
               <span className="font-display font-bold text-lg">שי ביצוע בגובה</span>
             </div>
             <p className="text-sm leading-relaxed">
-              מומחי איטום קירות חיצוניים בשיטת הסנפלינג. שירות מקצועי, מהיר ובטוח לבניינים בכל הגבהים.
+              מומחי איטום קירות חיצוניים בסנפלינג. שירות מקצועי, מהיר ובטוח לבניינים בכל הגבהים.
             </p>
           </div>
           <div>
