@@ -300,23 +300,30 @@ function TrustBar() {
 
 function ContactForm() {
   const [loading, setLoading] = useState(false);
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const name = String(data.get("name") || "");
-    const phone = String(data.get("phone") || "");
-    const problem = String(data.get("problem") || "");
-    const subject = `פנייה חדשה מהאתר - ${name}`;
-    const body = `שם: ${name}\nטלפון: ${phone}\n\nתיאור הבעיה:\n${problem}`;
-    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setTimeout(() => {
-      setLoading(false);
+    const payload = {
+      name: String(data.get("name") || "").trim(),
+      phone: String(data.get("phone") || "").trim(),
+      problem: String(data.get("problem") || "").trim(),
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("send failed");
       form.reset();
-      toast.success("נפתחה אפליקציית המייל - שלחו את ההודעה כדי להשלים את הפנייה.");
-    }, 700);
+      toast.success("הפנייה נשלחה בהצלחה! נחזור אליך בהקדם.");
+    } catch {
+      toast.error("שליחת הפנייה נכשלה. אנא נסו שוב או צרו קשר טלפוני.");
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <section id="contact" className="py-24 bg-secondary">
