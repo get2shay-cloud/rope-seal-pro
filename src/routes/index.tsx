@@ -212,7 +212,7 @@ function Benefits() {
             למה סנפלינג הוא הפתרון הנכון?
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-3">
           {items.map((it) => (
             <div
               key={it.title}
@@ -250,7 +250,7 @@ function Services() {
             פתרונות מקצה לקצה לבניין שלך
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {services.map((s) => (
             <div
               key={s.title}
@@ -280,7 +280,7 @@ function TrustBar() {
   return (
     <section className="py-16" style={{ background: "var(--gradient-hero)" }}>
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-5">
           {items.map((it) => (
             <div key={it.title} className="flex items-start gap-4 text-white">
               <div className="shrink-0 size-12 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
@@ -405,7 +405,7 @@ function Footer() {
   return (
     <footer className="bg-brand-deep text-white/80">
       <div className="container mx-auto px-6 py-14">
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-6">
           <div>
             <div className="flex items-center gap-2 text-white mb-4">
               <div className="size-9 rounded-lg bg-white/10 flex items-center justify-center ring-1 ring-white/20">
