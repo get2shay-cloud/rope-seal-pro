@@ -142,9 +142,7 @@ function Hero() {
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
             מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה ל-5 שנים ומחיר ללא תחרות.{" "}
-            <span className="font-extrabold text-white bg-brand/90 px-2 py-0.5 rounded-md shadow-glow">
-              התקשרו עכשיו לייעוץ חינם!
-            </span>
+            <strong className="font-bold text-white">התקשרו עכשיו לייעוץ חינם!</strong>
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
