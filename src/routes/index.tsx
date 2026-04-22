@@ -212,7 +212,7 @@ function Benefits() {
             למה סנפלינג הוא הפתרון הנכון?
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-3">
           {items.map((it) => (
             <div
               key={it.title}
