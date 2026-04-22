@@ -110,7 +110,7 @@ function Hero() {
         <img
           src={heroImg}
           alt="טכנאי סנפלינג מאטם קיר חיצוני של בניין גבוה"
-          className="w-full h-full object-cover object-[78%_center] sm:object-[60%_center] lg:object-[50%_center]"
+          className="w-full h-full object-cover object-[78%_center] sm:object-[60%_center] lg:object-[50%_center] scale-x-[-1]"
         />
         <div
           className="absolute inset-0"
