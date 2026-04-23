@@ -379,35 +379,35 @@ function ContactForm() {
 
           <form
             onSubmit={onSubmit}
-            className="bg-background rounded-2xl p-5 shadow-elegant border border-border/60"
+            className="bg-background rounded-2xl p-4 shadow-elegant border border-border/60"
           >
-            <div className="space-y-5">
+            <div className="space-y-3">
               <div>
-                <label className="block text-sm font-semibold mb-2">שם מלא</label>
-                <Input required name="name" placeholder="ישראל ישראלי" className="h-12" />
+                <label className="block text-xs font-semibold mb-1">שם מלא</label>
+                <Input required name="name" placeholder="ישראל ישראלי" className="h-10" />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-2">טלפון</label>
-                <Input required type="tel" name="phone" placeholder="050-1234567" className="h-12" />
+                <label className="block text-xs font-semibold mb-1">טלפון</label>
+                <Input required type="tel" name="phone" placeholder="050-1234567" className="h-10" />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-2">תיאור הבעיה</label>
+                <label className="block text-xs font-semibold mb-1">תיאור הבעיה</label>
                 <Textarea
                   required
                   name="problem"
                   placeholder="ספרו על הנזילה / רטיבות / סדקים בבניין..."
-                  rows={4}
+                  rows={3}
                 />
               </div>
               <Button
                 type="submit"
                 disabled={loading}
                 size="lg"
-                className="w-full h-14 text-base font-bold text-brand-foreground"
+                className="w-full h-12 text-sm font-bold text-brand-foreground"
                 style={{ background: "var(--gradient-brand)" }}
               >
                 {loading ? "שולח..." : "שלחו פנייה"}
-                <ArrowLeft className="size-5" />
+                <ArrowLeft className="size-4" />
               </Button>
               <p className="text-xs text-muted-foreground text-center">
                 המידע שלך מאובטח ולא יועבר לצדדים שלישיים
