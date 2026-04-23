@@ -217,16 +217,18 @@ function Benefits() {
           {items.map((it) => (
             <div
               key={it.title}
-              className="group relative bg-background rounded-2xl p-3.5 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
+              className="group relative bg-background rounded-2xl p-3.5 shadow-card hover:shadow-elegant transition-smooth border border-border/60 flex items-start gap-3"
             >
               <div
-                className="size-11 rounded-xl flex items-center justify-center mb-3 text-brand-foreground"
+                className="shrink-0 size-11 rounded-xl flex items-center justify-center text-brand-foreground"
                 style={{ background: "var(--gradient-brand)" }}
               >
                 <it.icon className="size-6" />
               </div>
-              <h3 className="font-display font-bold text-lg text-foreground mb-1.5">{it.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-display font-bold text-lg text-foreground mb-1.5">{it.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -255,15 +257,17 @@ function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="relative overflow-hidden rounded-2xl p-3 border border-border bg-card hover:bg-brand transition-smooth group"
+              className="relative overflow-hidden rounded-2xl p-3 border border-border bg-card hover:bg-brand transition-smooth group flex items-start gap-3"
             >
-              <s.icon className="size-8 text-brand group-hover:text-brand-foreground transition-smooth mb-3" />
-              <h3 className="font-display font-bold text-base text-foreground group-hover:text-brand-foreground transition-smooth mb-1.5">
-                {s.title}
-              </h3>
-              <p className="text-xs text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-relaxed">
-                {s.desc}
-              </p>
+              <s.icon className="shrink-0 size-8 text-brand group-hover:text-brand-foreground transition-smooth" />
+              <div className="flex-1 min-w-0">
+                <h3 className="font-display font-bold text-base text-foreground group-hover:text-brand-foreground transition-smooth mb-1.5">
+                  {s.title}
+                </h3>
+                <p className="text-xs text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-relaxed">
+                  {s.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
