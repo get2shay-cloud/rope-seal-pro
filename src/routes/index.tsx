@@ -217,13 +217,13 @@ function Benefits() {
           {items.map((it) => (
             <div
               key={it.title}
-              className="group relative bg-background rounded-2xl p-5 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
+              className="group relative bg-background rounded-2xl p-3.5 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
             >
               <div
-                className="size-14 rounded-xl flex items-center justify-center mb-6 text-brand-foreground"
+                className="size-11 rounded-xl flex items-center justify-center mb-3 text-brand-foreground"
                 style={{ background: "var(--gradient-brand)" }}
               >
-                <it.icon className="size-7" />
+                <it.icon className="size-6" />
               </div>
               <h3 className="font-display font-bold text-xl text-foreground mb-2">{it.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{it.desc}</p>
