@@ -135,9 +135,9 @@ function Hero() {
             5 שנות אחריות בכתב
           </div>
           <h1 className="font-display font-extrabold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-            פתרון סופי לנזילות ורטיבות –
+            שי ביצוע בגובה -
             <span className="block mt-2 bg-gradient-to-l from-white to-white/70 bg-clip-text text-transparent">
-              איטום קירות חיצוניים בסנפלינג
+              פתרון סופי לנזילות ורטיבות
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
