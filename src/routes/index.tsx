@@ -18,6 +18,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import heroImg from "@/assets/hero-abseiling.jpg";
+import workerContactImg from "@/assets/worker-contact.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -334,10 +335,25 @@ function ContactForm() {
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight mb-5">
               קבלו הצעת מחיר תוך 24 שעות
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               ספרו לנו על הבעיה בבניין – אנחנו נחזור אליכם עם פתרון מקצועי, לוחות זמנים והצעת מחיר ללא התחייבות.
             </p>
-            <div className="space-y-4">
+            <div className="relative rounded-2xl overflow-hidden shadow-elegant border border-border/60 mb-6 aspect-[4/3]">
+              <img
+                src={workerContactImg}
+                alt="איש מקצוע מומחה לאיטום בסנפלינג על קיר אבן"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 right-4 left-4 text-white">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-3 py-1 ring-1 ring-white/30 text-xs font-semibold">
+                  <BadgeCheck className="size-3.5" />
+                  צוות מוסמך לעבודה בגובה
+                </div>
+              </div>
+            </div>
+            <div className="space-y-3">
               {[
                 { icon: Phone, text: PHONE_DISPLAY, href: PHONE },
                 { icon: Mail, text: EMAIL, href: `mailto:${EMAIL}` },
