@@ -368,10 +368,10 @@ function ContactForm() {
                   <div className="size-10 rounded-lg bg-background flex items-center justify-center shadow-card">
                     <c.icon className="size-5 text-brand" />
                   </div>
-                  <span className="font-medium">{c.text}</span>
                   {c.suffix && (
-                    <span className="text-muted-foreground font-medium">— {c.suffix}</span>
+                    <span className="text-muted-foreground font-medium">{c.suffix}</span>
                   )}
+                  <span className="font-medium">{c.text}</span>
                 </a>
               ))}
             </div>
