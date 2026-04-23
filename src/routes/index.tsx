@@ -227,7 +227,7 @@ function Benefits() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-display font-bold text-lg text-foreground mb-1.5">{it.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+                <p className="text-base text-muted-foreground leading-snug">{it.desc}</p>
               </div>
             </div>
           ))}
@@ -264,7 +264,7 @@ function Services() {
                 <h3 className="font-display font-bold text-base text-foreground group-hover:text-brand-foreground transition-smooth mb-1.5">
                   {s.title}
                 </h3>
-                <p className="text-xs text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-relaxed">
+                <p className="text-sm text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-snug">
                   {s.desc}
                 </p>
               </div>
@@ -293,7 +293,7 @@ function TrustBar() {
               </div>
               <div>
                 <div className="font-display font-bold text-base">{it.title}</div>
-                <div className="text-white/75 text-xs mt-0.5">{it.desc}</div>
+                <div className="text-white/75 text-sm mt-0.5">{it.desc}</div>
               </div>
             </div>
           ))}
@@ -387,15 +387,15 @@ function ContactForm() {
           >
             <div className="space-y-3">
               <div>
-                <label className="block text-xs font-semibold mb-1">שם מלא</label>
+                <label className="block text-sm font-semibold mb-1">שם מלא</label>
                 <Input required name="name" placeholder="ישראל ישראלי" className="h-10" />
               </div>
               <div>
-                <label className="block text-xs font-semibold mb-1">טלפון</label>
+                <label className="block text-sm font-semibold mb-1">טלפון</label>
                 <Input required type="tel" name="phone" placeholder="050-1234567" className="h-10" />
               </div>
               <div>
-                <label className="block text-xs font-semibold mb-1">תיאור הבעיה</label>
+                <label className="block text-sm font-semibold mb-1">תיאור הבעיה</label>
                 <Textarea
                   required
                   name="problem"
