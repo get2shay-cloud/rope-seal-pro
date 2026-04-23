@@ -217,16 +217,16 @@ function Benefits() {
           {items.map((it) => (
             <div
               key={it.title}
-              className="group relative bg-background rounded-2xl p-5 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
+              className="group relative bg-background rounded-2xl p-3.5 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
             >
               <div
-                className="size-14 rounded-xl flex items-center justify-center mb-6 text-brand-foreground"
+                className="size-11 rounded-xl flex items-center justify-center mb-3 text-brand-foreground"
                 style={{ background: "var(--gradient-brand)" }}
               >
-                <it.icon className="size-7" />
+                <it.icon className="size-6" />
               </div>
-              <h3 className="font-display font-bold text-xl text-foreground mb-2">{it.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{it.desc}</p>
+              <h3 className="font-display font-bold text-lg text-foreground mb-1.5">{it.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
             </div>
           ))}
         </div>
@@ -255,13 +255,13 @@ function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="relative overflow-hidden rounded-2xl p-4 border border-border bg-card hover:bg-brand transition-smooth group"
+              className="relative overflow-hidden rounded-2xl p-3 border border-border bg-card hover:bg-brand transition-smooth group"
             >
-              <s.icon className="size-10 text-brand group-hover:text-brand-foreground transition-smooth mb-5" />
-              <h3 className="font-display font-bold text-xl text-foreground group-hover:text-brand-foreground transition-smooth mb-2">
+              <s.icon className="size-8 text-brand group-hover:text-brand-foreground transition-smooth mb-3" />
+              <h3 className="font-display font-bold text-base text-foreground group-hover:text-brand-foreground transition-smooth mb-1.5">
                 {s.title}
               </h3>
-              <p className="text-sm text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-relaxed">
+              <p className="text-xs text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-relaxed">
                 {s.desc}
               </p>
             </div>
@@ -283,13 +283,13 @@ function TrustBar() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-2">
           {items.map((it) => (
-            <div key={it.title} className="flex items-start gap-4 text-white">
-              <div className="shrink-0 size-12 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
-                <it.icon className="size-6" />
+            <div key={it.title} className="flex items-start gap-3 text-white">
+              <div className="shrink-0 size-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                <it.icon className="size-5" />
               </div>
               <div>
-                <div className="font-display font-bold text-lg">{it.title}</div>
-                <div className="text-white/75 text-sm mt-0.5">{it.desc}</div>
+                <div className="font-display font-bold text-base">{it.title}</div>
+                <div className="text-white/75 text-xs mt-0.5">{it.desc}</div>
               </div>
             </div>
           ))}
@@ -379,7 +379,7 @@ function ContactForm() {
 
           <form
             onSubmit={onSubmit}
-            className="bg-background rounded-2xl p-8 shadow-elegant border border-border/60"
+            className="bg-background rounded-2xl p-5 shadow-elegant border border-border/60"
           >
             <div className="space-y-5">
               <div>
