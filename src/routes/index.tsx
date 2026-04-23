@@ -204,7 +204,7 @@ function Benefits() {
     },
   ];
   return (
-    <section className="py-24 bg-secondary">
+    <section className="py-16 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">היתרונות שלנו</div>
@@ -242,7 +242,7 @@ function Services() {
     { icon: Layers, title: "חיזוק חיפויי אבן", desc: "ייצוב אריחים רופפים, איטום פוגות והגנה מנפילת חיפויים." },
   ];
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-16 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">השירותים שלנו</div>
@@ -278,7 +278,7 @@ function TrustBar() {
     { icon: Target, title: "5 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
   ];
   return (
-    <section className="py-16" style={{ background: "var(--gradient-hero)" }}>
+    <section className="py-12" style={{ background: "var(--gradient-hero)" }}>
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-5">
           {items.map((it) => (
@@ -326,7 +326,7 @@ function ContactForm() {
     }
   };
   return (
-    <section id="contact" className="py-24 bg-secondary">
+    <section id="contact" className="py-16 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
