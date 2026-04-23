@@ -207,17 +207,17 @@ function Benefits() {
   return (
     <section className="py-16 bg-secondary">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mb-14">
+        <div className="max-w-2xl mb-8">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">היתרונות שלנו</div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight text-foreground">
             למה סנפלינג הוא הפתרון הנכון?
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-3">
+        <div className="grid md:grid-cols-3 gap-2">
           {items.map((it) => (
             <div
               key={it.title}
-              className="group relative bg-background rounded-2xl p-8 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
+              className="group relative bg-background rounded-2xl p-6 shadow-card hover:shadow-elegant transition-smooth border border-border/60"
             >
               <div
                 className="size-14 rounded-xl flex items-center justify-center mb-6 text-brand-foreground"
@@ -245,17 +245,17 @@ function Services() {
   return (
     <section id="services" className="py-16 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mb-14">
+        <div className="max-w-2xl mb-8">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">השירותים שלנו</div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight">
             פתרונות מקצה לקצה לבניין שלך
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {services.map((s) => (
             <div
               key={s.title}
-              className="relative overflow-hidden rounded-2xl p-7 border border-border bg-card hover:bg-brand transition-smooth group"
+              className="relative overflow-hidden rounded-2xl p-5 border border-border bg-card hover:bg-brand transition-smooth group"
             >
               <s.icon className="size-10 text-brand group-hover:text-brand-foreground transition-smooth mb-5" />
               <h3 className="font-display font-bold text-xl text-foreground group-hover:text-brand-foreground transition-smooth mb-2">
@@ -281,7 +281,7 @@ function TrustBar() {
   return (
     <section className="py-12" style={{ background: "var(--gradient-hero)" }}>
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-3">
           {items.map((it) => (
             <div key={it.title} className="flex items-start gap-4 text-white">
               <div className="shrink-0 size-12 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
@@ -329,7 +329,7 @@ function ContactForm() {
   return (
     <section id="contact" className="py-16 bg-secondary">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
           <div>
             <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">צרו קשר</div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight mb-5">
