@@ -355,7 +355,7 @@ function ContactForm() {
             </div>
             <div className="space-y-3">
               {[
-                { icon: Phone, text: PHONE_DISPLAY, href: PHONE },
+                { icon: Phone, text: PHONE_DISPLAY, href: PHONE, suffix: "שי" },
                 { icon: Mail, text: EMAIL, href: `mailto:${EMAIL}` },
                 { icon: MapPin, text: SERVICE_AREA, href: "#" },
               ].map((c) => (
@@ -369,6 +369,9 @@ function ContactForm() {
                     <c.icon className="size-5 text-brand" />
                   </div>
                   <span className="font-medium">{c.text}</span>
+                  {c.suffix && (
+                    <span className="text-muted-foreground font-medium">— {c.suffix}</span>
+                  )}
                 </a>
               ))}
             </div>
