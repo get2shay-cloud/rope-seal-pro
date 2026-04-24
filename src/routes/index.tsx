@@ -138,12 +138,12 @@ function Hero() {
           <h1 className="font-display font-extrabold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
             שי ביצוע בגובה -
             <span className="block mt-2 bg-gradient-to-l from-white to-white/70 bg-clip-text text-transparent">
-              פתרון סופי לנזילות ורטיבות
+              איטום בסנפלינג
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
-            מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה ל-5 שנים ומחיר ללא תחרות.{" "}
-            <strong className="font-bold text-white">התקשרו עכשיו לייעוץ חינם!</strong>
+            מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה ל-5 שנים ומחיר ללא תחרות.
+            <strong className="block mt-3 font-bold text-white">התקשרו עכשיו לייעוץ חינם!</strong>
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
@@ -250,7 +250,7 @@ function Services() {
         <div className="max-w-2xl mb-6">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">השירותים שלנו</div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight">
-            פתרונות מקצה לקצה לבניין שלך
+            פתרון סופי לנזילות ורטיבות
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1.5">
