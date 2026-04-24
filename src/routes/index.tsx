@@ -106,7 +106,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[88svh] sm:min-h-[100svh] flex items-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={heroImg}
@@ -129,7 +129,7 @@ function Hero() {
         />
       </div>
 
-      <div className="relative container mx-auto px-6 pt-14 sm:pt-20 pb-8 sm:pb-16">
+      <div className="relative container mx-auto px-6 pt-14 sm:pt-20 pb-12 sm:pb-16">
         <div className="max-w-3xl text-white">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 ring-1 ring-white/20 text-sm mb-3">
             <BadgeCheck className="size-4" />
