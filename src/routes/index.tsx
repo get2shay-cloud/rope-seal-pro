@@ -84,7 +84,7 @@ function Index() {
 function Header() {
   return (
     <header className="absolute top-0 inset-x-0 z-30">
-      <div className="container mx-auto px-6 py-5 flex items-center justify-between">
+      <div className="container mx-auto px-6 py-3 sm:py-5 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-white">
           <div className="size-9 rounded-lg bg-white/10 backdrop-blur flex items-center justify-center ring-1 ring-white/20">
             <Building2 className="size-5" />
@@ -129,7 +129,7 @@ function Hero() {
         />
       </div>
 
-      <div className="relative container mx-auto px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
+      <div className="relative container mx-auto px-6 pt-14 sm:pt-20 pb-12 sm:pb-16">
         <div className="max-w-3xl text-white">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 ring-1 ring-white/20 text-sm mb-3">
             <BadgeCheck className="size-4" />
