@@ -138,12 +138,12 @@ function Hero() {
           <h1 className="font-display font-extrabold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
             שי ביצוע בגובה -
             <span className="block mt-2 bg-gradient-to-l from-white to-white/70 bg-clip-text text-transparent">
-              פתרון סופי לנזילות ורטיבות
+              איטום בסנפלינג
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
-            מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה ל-5 שנים ומחיר ללא תחרות.{" "}
-            <strong className="font-bold text-white">התקשרו עכשיו לייעוץ חינם!</strong>
+            מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה ל-5 שנים ומחיר ללא תחרות.
+            <strong className="block mt-3 font-bold text-white">התקשרו עכשיו לייעוץ חינם!</strong>
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
@@ -205,29 +205,29 @@ function Benefits() {
     },
   ];
   return (
-    <section className="py-10 bg-secondary">
+    <section className="py-10 lg:py-16 bg-secondary">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mb-6">
+        <div className="max-w-2xl mb-6 lg:mb-10">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">היתרונות שלנו</div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight text-foreground">
             למה סנפלינג הוא הפתרון הנכון?
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-1.5">
+        <div className="grid md:grid-cols-3 gap-1.5 lg:gap-5">
           {items.map((it) => (
             <div
               key={it.title}
-              className="group relative bg-background rounded-2xl p-3.5 shadow-card hover:shadow-elegant transition-smooth border border-border/60 flex items-start gap-3"
+              className="group relative bg-background rounded-2xl p-3.5 lg:p-6 shadow-card hover:shadow-elegant transition-smooth border border-border/60 flex items-start gap-3 lg:gap-4"
             >
               <div
-                className="shrink-0 size-11 rounded-xl flex items-center justify-center text-brand-foreground"
+                className="shrink-0 size-11 lg:size-12 rounded-xl flex items-center justify-center text-brand-foreground"
                 style={{ background: "var(--gradient-brand)" }}
               >
                 <it.icon className="size-6" />
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-lg text-foreground mb-1.5">{it.title}</h3>
-                <p className="text-base text-muted-foreground leading-snug">{it.desc}</p>
+                <h3 className="font-display font-bold text-lg lg:text-xl text-foreground mb-1.5 lg:mb-2">{it.title}</h3>
+                <p className="text-base text-muted-foreground leading-snug lg:leading-relaxed">{it.desc}</p>
               </div>
             </div>
           ))}
@@ -245,26 +245,26 @@ function Services() {
     { icon: Layers, title: "חיזוק חיפויי אבן", desc: "ייצוב אריחים רופפים, איטום פוגות והגנה מנפילת חיפויים." },
   ];
   return (
-    <section id="services" className="py-10 bg-background">
+    <section id="services" className="py-10 lg:py-16 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mb-6">
+        <div className="max-w-2xl mb-6 lg:mb-10">
           <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">השירותים שלנו</div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight">
-            פתרונות מקצה לקצה לבניין שלך
+            פתרון סופי לנזילות ורטיבות
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1.5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1.5 lg:gap-5">
           {services.map((s) => (
             <div
               key={s.title}
-              className="relative overflow-hidden rounded-2xl p-3 border border-border bg-card hover:bg-brand transition-smooth group flex items-start gap-3"
+              className="relative overflow-hidden rounded-2xl p-3 lg:p-5 border border-border bg-card hover:bg-brand transition-smooth group flex items-start gap-3 lg:gap-4"
             >
-              <s.icon className="shrink-0 size-8 text-brand group-hover:text-brand-foreground transition-smooth" />
+              <s.icon className="shrink-0 size-8 lg:size-9 text-brand group-hover:text-brand-foreground transition-smooth" />
               <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-base text-foreground group-hover:text-brand-foreground transition-smooth mb-1.5">
+                <h3 className="font-display font-bold text-base lg:text-lg text-foreground group-hover:text-brand-foreground transition-smooth mb-1.5 lg:mb-2">
                   {s.title}
                 </h3>
-                <p className="text-sm text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-snug">
+                <p className="text-sm lg:text-base text-muted-foreground group-hover:text-brand-foreground/85 transition-smooth leading-snug lg:leading-relaxed">
                   {s.desc}
                 </p>
               </div>
@@ -283,24 +283,23 @@ function TrustBar() {
     { icon: Target, title: "5 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
   ];
   return (
-    <section className="py-8" style={{ background: "var(--gradient-hero)" }}>
+    <section className="py-8 lg:py-12" style={{ background: "var(--gradient-hero)" }}>
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-2">
+        <div className="grid md:grid-cols-3 gap-2 lg:gap-8">
           {items.map((it) => (
-            <div key={it.title} className="flex items-start gap-3 text-white">
-              <div className="shrink-0 size-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
-                <it.icon className="size-5" />
+            <div key={it.title} className="flex items-start gap-3 lg:gap-4 text-white">
+              <div className="shrink-0 size-10 lg:size-12 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                <it.icon className="size-5 lg:size-6" />
               </div>
               <div>
-                <div className="font-display font-bold text-base">{it.title}</div>
-                <div className="text-white/75 text-sm mt-0.5">{it.desc}</div>
+                <div className="font-display font-bold text-base lg:text-lg">{it.title}</div>
+                <div className="text-white/75 text-sm lg:text-base mt-0.5 lg:mt-1">{it.desc}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </section>
-  );
+    </section>);
 }
 
 function ContactForm() {
@@ -331,9 +330,9 @@ function ContactForm() {
     }
   };
   return (
-    <section id="contact" className="py-10 bg-secondary">
+    <section id="contact" className="py-10 lg:py-16 bg-secondary">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-6 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center max-w-6xl mx-auto">
           <div>
             <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">צרו קשר</div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight mb-5">
