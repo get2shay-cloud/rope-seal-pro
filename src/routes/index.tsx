@@ -131,7 +131,7 @@ function Hero() {
 
       <div className="relative container mx-auto px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-3xl text-white">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 ring-1 ring-white/20 text-sm mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 ring-1 ring-white/20 text-sm mb-3">
             <BadgeCheck className="size-4" />
             5 שנות אחריות בכתב
           </div>
