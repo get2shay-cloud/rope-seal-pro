@@ -438,10 +438,10 @@ function Clients() {
       <div className="container mx-auto px-6 py-14 sm:py-20">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            ניסיון מקצועי בפרויקטים של החברות המובילות
+            ניסיון מוכח בשטח
           </h2>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-            ביצוע עבודות איטום ושיקום מעטפת בסטנדרטים המחמירים ביותר
+            ביצוע עבודות איטום ושיקום מעטפת לחברות המובילות בתחום
           </p>
         </div>
 
