@@ -424,7 +424,56 @@ function ContactForm() {
   );
 }
 
-function Footer() {
+
+function Clients() {
+  const companies = [
+    "אלקטרה בנייה",
+    "דניה סיבוס",
+    "צמח המרמן",
+    "אשטרום",
+    "עץ השקד",
+  ];
+  return (
+    <section className="bg-muted/40 border-y border-border">
+      <div className="container mx-auto px-6 py-14 sm:py-20">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+            ניסיון מקצועי בפרויקטים של החברות המובילות
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground">
+            ביצוע עבודות איטום ושיקום מעטפת בסטנדרטים המחמירים ביותר
+          </p>
+        </div>
+
+        {/* Mobile: horizontal scroll. Desktop: grid */}
+        <div className="md:hidden -mx-6 px-6 overflow-x-auto">
+          <div className="flex gap-4 min-w-max pb-2">
+            {companies.map((name) => (
+              <ClientBadge key={name} name={name} />
+            ))}
+          </div>
+        </div>
+        <div className="hidden md:grid grid-cols-3 lg:grid-cols-5 gap-6">
+          {companies.map((name) => (
+            <ClientBadge key={name} name={name} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClientBadge({ name }: { name: string }) {
+  return (
+    <div className="group flex items-center justify-center h-20 sm:h-24 px-6 rounded-xl bg-background border border-border shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:shadow-md hover:border-primary/40 transition-all duration-300">
+      <span className="text-base sm:text-lg font-semibold tracking-tight text-foreground/80 group-hover:text-primary whitespace-nowrap">
+        {name}
+      </span>
+    </div>
+  );
+}
+
+
   return (
     <footer className="bg-brand-deep text-white/80">
       <div className="container mx-auto px-6 py-14">
