@@ -473,7 +473,7 @@ function ClientBadge({ name }: { name: string }) {
   );
 }
 
-
+function Footer() {
   return (
     <footer className="bg-brand-deep text-white/80">
       <div className="container mx-auto px-6 py-14">
