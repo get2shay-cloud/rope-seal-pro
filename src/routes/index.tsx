@@ -74,6 +74,7 @@ function Index() {
       <Services />
       <TrustBar />
       <ContactForm />
+      <Clients />
       <Footer />
       <FloatingWhatsApp />
       <Toaster richColors position="top-center" dir="rtl" />
