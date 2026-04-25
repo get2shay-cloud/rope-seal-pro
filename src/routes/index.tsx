@@ -19,6 +19,11 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-abseiling.jpg";
 import workerContactImg from "@/assets/worker-contact.jpg";
+import electraLogo from "@/assets/clients/electra.png";
+import danyaLogo from "@/assets/clients/danya.png";
+import tzemachLogo from "@/assets/clients/tzemach.jpg";
+import braelLogo from "@/assets/clients/brael.png";
+import etzHashakedLogo from "@/assets/clients/etz-hashaked.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -425,37 +430,30 @@ function ContactForm() {
 }
 
 
+
 function Clients() {
   const companies = [
-    "אלקטרה בנייה",
-    "דניה סיבוס",
-    "צמח המרמן",
-    "אשטרום",
-    "עץ השקד",
+    { name: "אלקטרה בנייה", logo: electraLogo },
+    { name: "דניה סיבוס", logo: danyaLogo },
+    { name: "צמח המרמן", logo: tzemachLogo },
+    { name: "קבוצת בראל", logo: braelLogo },
+    { name: "עץ השקד", logo: etzHashakedLogo },
   ];
   return (
     <section className="bg-muted/40 border-y border-border">
-      <div className="container mx-auto px-6 py-14 sm:py-20">
-        <div className="text-center max-w-3xl mx-auto mb-10">
+      <div className="container mx-auto px-6 py-10 sm:py-14">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground">
             ניסיון מוכח בשטח
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-muted-foreground">
+          <p className="mt-2 text-sm sm:text-base text-muted-foreground">
             ביצוע עבודות איטום ושיקום מעטפת לחברות המובילות בתחום
           </p>
         </div>
 
-        {/* Mobile: horizontal scroll. Desktop: grid */}
-        <div className="md:hidden -mx-6 px-6 overflow-x-auto">
-          <div className="flex gap-4 min-w-max pb-2">
-            {companies.map((name) => (
-              <ClientBadge key={name} name={name} />
-            ))}
-          </div>
-        </div>
-        <div className="hidden md:grid grid-cols-3 lg:grid-cols-5 gap-6">
-          {companies.map((name) => (
-            <ClientBadge key={name} name={name} />
+        <div className="grid grid-cols-5 gap-2 sm:gap-4 md:gap-6 items-center">
+          {companies.map((c) => (
+            <ClientBadge key={c.name} name={c.name} logo={c.logo} />
           ))}
         </div>
       </div>
@@ -463,12 +461,15 @@ function Clients() {
   );
 }
 
-function ClientBadge({ name }: { name: string }) {
+function ClientBadge({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="group flex items-center justify-center h-20 sm:h-24 px-6 rounded-xl bg-background border border-border shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:shadow-md hover:border-primary/40 transition-all duration-300">
-      <span className="text-base sm:text-lg font-semibold tracking-tight text-foreground/80 group-hover:text-primary whitespace-nowrap">
-        {name}
-      </span>
+    <div className="group flex items-center justify-center h-14 sm:h-20 md:h-24 px-1 sm:px-4 rounded-lg sm:rounded-xl bg-background border border-border shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:shadow-md hover:border-primary/40 transition-all duration-300">
+      <img
+        src={logo}
+        alt={name}
+        loading="lazy"
+        className="max-h-full max-w-full object-contain p-1 sm:p-2"
+      />
     </div>
   );
 }
