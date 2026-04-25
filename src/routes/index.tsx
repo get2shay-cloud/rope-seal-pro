@@ -19,6 +19,11 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-abseiling.jpg";
 import workerContactImg from "@/assets/worker-contact.jpg";
+import electraLogo from "@/assets/clients/electra.png";
+import danyaLogo from "@/assets/clients/danya.png";
+import tzemachLogo from "@/assets/clients/tzemach.jpg";
+import braelLogo from "@/assets/clients/brael.png";
+import etzHashakedLogo from "@/assets/clients/etz-hashaked.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -425,11 +430,6 @@ function ContactForm() {
 }
 
 
-import electraLogo from "@/assets/clients/electra.png";
-import danyaLogo from "@/assets/clients/danya.png";
-import tzemachLogo from "@/assets/clients/tzemach.jpg";
-import braelLogo from "@/assets/clients/brael.png";
-import etzHashakedLogo from "@/assets/clients/etz-hashaked.jpg";
 
 function Clients() {
   const companies = [
