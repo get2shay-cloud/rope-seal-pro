@@ -455,7 +455,7 @@ function Clients() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 md:gap-6 items-center">
           {companies.map((c) => (
-            <ClientBadge key={c.name} name={c.name} logo={c.logo} scale={c.name === "שטרן" ? 0.85 : c.name === "קבוצת בראל" ? 1.1 : c.name === "אלקטרה" ? 1.05 : 1} />
+            <ClientBadge key={c.name} name={c.name} logo={c.logo} scale={c.name === "שטרן" ? 0.85 : c.name === "קבוצת בראל" ? 1.1 : c.name === "אלקטרה בנייה" ? 1.05 : 1} />
           ))}
         </div>
       </div>
