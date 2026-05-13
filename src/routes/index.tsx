@@ -455,7 +455,7 @@ function Clients() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 md:gap-6 items-center">
           {companies.map((c) => (
-            <ClientBadge key={c.name} name={c.name} logo={c.logo} />
+            <ClientBadge key={c.name} name={c.name} logo={c.logo} scale={c.name === "שטרן" ? 0.85 : 1} />
           ))}
         </div>
       </div>
@@ -463,7 +463,7 @@ function Clients() {
   );
 }
 
-function ClientBadge({ name, logo }: { name: string; logo: string }) {
+function ClientBadge({ name, logo, scale = 1 }: { name: string; logo: string; scale?: number }) {
   return (
     <div className="group flex items-center justify-center h-24 sm:h-32 md:h-36 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-background border border-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300">
       <img
@@ -471,6 +471,7 @@ function ClientBadge({ name, logo }: { name: string; logo: string }) {
         alt={name}
         loading="lazy"
         className="max-h-full max-w-full object-contain p-1 sm:p-2"
+        style={scale !== 1 ? { transform: `scale(${scale})` } : undefined}
       />
     </div>
   );
