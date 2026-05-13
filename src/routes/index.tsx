@@ -39,7 +39,7 @@ const WHATSAPP = "https://wa.me/972525472518?text=" + encodeURIComponent("שלו
 const PHONE = "tel:+972525472518";
 const EMAIL = "Get2Shay@gmail.com";
 const PHONE_DISPLAY = "052-547-2518";
-const SERVICE_AREA = "שירות בכל צפון הארץ";
+const SERVICE_AREA = "שירות בכל איזור הצפון";
 
 declare global {
   interface Window {
