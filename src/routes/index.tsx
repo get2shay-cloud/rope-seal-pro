@@ -465,7 +465,7 @@ function Clients() {
 
 function ClientBadge({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="group flex items-center justify-center h-24 sm:h-32 md:h-36 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-background border border-border shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:shadow-md hover:border-primary/40 transition-all duration-300">
+    <div className="group flex items-center justify-center h-24 sm:h-32 md:h-36 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-background border border-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300">
       <img
         src={logo}
         alt={name}
