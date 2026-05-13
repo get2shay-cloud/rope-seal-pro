@@ -24,6 +24,7 @@ import danyaLogo from "@/assets/clients/danya.png";
 import tzemachLogo from "@/assets/clients/tzemach.jpg";
 import braelLogo from "@/assets/clients/brael.png";
 import etzHashakedLogo from "@/assets/clients/etz-hashaked.jpg";
+import sternLogo from "@/assets/clients/stern.webp";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -438,6 +439,7 @@ function Clients() {
     { name: "צמח המרמן", logo: tzemachLogo },
     { name: "קבוצת בראל", logo: braelLogo },
     { name: "עץ השקד", logo: etzHashakedLogo },
+    { name: "שטרן", logo: sternLogo },
   ];
   return (
     <section className="bg-muted/40 border-y border-border">
@@ -447,11 +449,11 @@ function Clients() {
             ניסיון מוכח בשטח
           </h2>
           <p className="mt-2 text-sm sm:text-base text-muted-foreground">
-            ביצוע עבודות איטום ושיקום מעטפת לחברות המובילות בתחום
+            ביצוע עבודות איטום ושיקום מעטפת עבור חברות הבנייה המובילות
           </p>
         </div>
 
-        <div className="grid grid-cols-5 gap-2 sm:gap-4 md:gap-6 items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 md:gap-6 items-center">
           {companies.map((c) => (
             <ClientBadge key={c.name} name={c.name} logo={c.logo} />
           ))}
@@ -463,7 +465,7 @@ function Clients() {
 
 function ClientBadge({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="group flex items-center justify-center h-14 sm:h-20 md:h-24 px-1 sm:px-4 rounded-lg sm:rounded-xl bg-background border border-border shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:shadow-md hover:border-primary/40 transition-all duration-300">
+    <div className="group flex items-center justify-center h-24 sm:h-32 md:h-36 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-background border border-border shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:shadow-md hover:border-primary/40 transition-all duration-300">
       <img
         src={logo}
         alt={name}
