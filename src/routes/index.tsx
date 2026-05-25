@@ -286,7 +286,7 @@ function TrustBar() {
   const items = [
     { icon: BadgeCheck, title: "גולשי מעטפת מוסמכים", desc: "תעודות הסמכה בתוקף ממשרד העבודה" },
     { icon: HardHat, title: "ציוד תקני ומאושר", desc: "ציוד גלישה ובטיחות העומד בכל התקנים והתקנות" },
-    { icon: Target, title: "עד 5 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
+    { icon: Target, title: "עד 5 שנות אחריות", desc: "על עבודות איטום ושיקום" },
   ];
   return (
     <section className="py-8 lg:py-12" style={{ background: "var(--gradient-hero)" }}>
