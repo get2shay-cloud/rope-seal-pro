@@ -140,7 +140,7 @@ function Hero() {
         <div className="max-w-3xl text-white">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 ring-1 ring-white/20 text-sm mb-6">
             <BadgeCheck className="size-4" />
-            5 שנות אחריות בכתב
+            עד 5 שנות אחריות בכתב
           </div>
           <h1 className="font-display font-extrabold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
             שי ביצוע בגובה -
@@ -149,7 +149,7 @@ function Hero() {
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
-            מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה ל-5 שנים ומחיר ללא תחרות.
+            מומחים לאיטום ושיקום מבנים בסנפלינג עם מעל 10 שנות ניסיון. עבודה נקייה, מהירה ומדויקת ללא פיגומים. אחריות מלאה לעד 5 שנים ומחיר ללא תחרות.
             <strong className="block mt-3 font-bold text-white">התקשרו עכשיו לייעוץ חינם!</strong>
           </p>
 
@@ -173,11 +173,10 @@ function Hero() {
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+          <div className="mt-12 grid grid-cols-2 gap-6 max-w-xs">
             {[
               { n: 10, l: "שנות ניסיון", prefix: "+", mode: "count" as const },
               { n: 500, l: "בניינים", suffix: "+", mode: "count" as const },
-              { n: 5, l: "שנות אחריות", mode: "pulse" as const },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display font-extrabold text-3xl">
@@ -287,7 +286,7 @@ function TrustBar() {
   const items = [
     { icon: BadgeCheck, title: "גולשי מעטפת מוסמכים", desc: "תעודות הסמכה בתוקף ממשרד העבודה" },
     { icon: HardHat, title: "ציוד תקני ומאושר", desc: "ציוד גלישה ובטיחות העומד בכל התקנים והתקנות" },
-    { icon: Target, title: "5 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
+    { icon: Target, title: "עד 5 שנות אחריות", desc: "אחריות בכתב על כל עבודת איטום" },
   ];
   return (
     <section className="py-8 lg:py-12" style={{ background: "var(--gradient-hero)" }}>
