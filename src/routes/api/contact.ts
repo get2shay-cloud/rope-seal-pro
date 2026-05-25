@@ -8,6 +8,8 @@ const ContactSchema = z.object({
   name: z.string().trim().min(1).max(100),
   phone: z.string().trim().min(5).max(30),
   problem: z.string().trim().min(1).max(2000),
+  // Honeypot field — legitimate users leave this empty; bots fill all fields.
+  website: z.string().max(0).optional(),
 });
 
 function encodeRFC2047(text: string): string {
