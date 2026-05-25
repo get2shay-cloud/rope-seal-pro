@@ -8,6 +8,8 @@ const ContactSchema = z.object({
   name: z.string().trim().min(1).max(100),
   phone: z.string().trim().min(5).max(30),
   problem: z.string().trim().min(1).max(2000),
+  // Honeypot field — legitimate users leave this empty; bots fill all fields.
+  website: z.string().max(0).optional(),
 });
 
 function encodeRFC2047(text: string): string {
@@ -51,11 +53,9 @@ export const Route = createFileRoute("/api/contact")({
 
           const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
           const GOOGLE_MAIL_API_KEY = process.env.GOOGLE_MAIL_API_KEY;
-          if (!LOVABLE_API_KEY) {
-            return Response.json({ error: "LOVABLE_API_KEY not configured" }, { status: 500 });
-          }
-          if (!GOOGLE_MAIL_API_KEY) {
-            return Response.json({ error: "GOOGLE_MAIL_API_KEY not configured" }, { status: 500 });
+          if (!LOVABLE_API_KEY || !GOOGLE_MAIL_API_KEY) {
+            console.error("Contact route: missing required API key configuration");
+            return Response.json({ error: "Service temporarily unavailable" }, { status: 503 });
           }
 
           const subject = `פנייה חדשה מהאתר - ${name}`;
@@ -75,10 +75,7 @@ export const Route = createFileRoute("/api/contact")({
           if (!res.ok) {
             const errText = await res.text();
             console.error(`Gmail send failed [${res.status}]: ${errText}`);
-            return Response.json(
-              { error: "Failed to send email", status: res.status },
-              { status: 502 },
-            );
+            return Response.json({ error: "Service temporarily unavailable" }, { status: 502 });
           }
 
           return Response.json({ success: true });
