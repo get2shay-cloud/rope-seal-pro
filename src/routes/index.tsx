@@ -124,14 +124,14 @@ function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(270deg, oklch(0.13 0.09 258 / 0.97) 0%, oklch(0.15 0.1 258 / 0.9) 35%, oklch(0.18 0.12 258 / 0.7) 70%, oklch(0.2 0.12 258 / 0.55) 100%)",
+              "linear-gradient(270deg, oklch(0.13 0.09 258 / 0.87) 0%, oklch(0.15 0.1 258 / 0.8) 35%, oklch(0.18 0.12 258 / 0.6) 70%, oklch(0.2 0.12 258 / 0.45) 100%)",
           }}
         />
         <div
           className="absolute inset-0 sm:hidden"
           style={{
             background:
-              "linear-gradient(180deg, oklch(0.15 0.09 258 / 0.45) 0%, oklch(0.15 0.09 258 / 0.15) 50%, oklch(0.15 0.09 258 / 0.55) 100%)",
+              "linear-gradient(180deg, oklch(0.15 0.09 258 / 0.35) 0%, oklch(0.15 0.09 258 / 0.05) 50%, oklch(0.15 0.09 258 / 0.45) 100%)",
           }}
         />
       </div>
@@ -173,8 +173,9 @@ function Hero() {
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-6 max-w-xs">
+          <div className="mt-12 grid grid-cols-3 gap-5 max-w-sm">
             {[
+              { n: 100, l: "לקוחות מרוצים", suffix: "+", mode: "count" as const },
               { n: 10, l: "שנות ניסיון", prefix: "+", mode: "count" as const },
               { n: 500, l: "בניינים", suffix: "+", mode: "count" as const },
             ].map((s) => (
