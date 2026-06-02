@@ -49,7 +49,15 @@ export const Route = createRootRoute({
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RapLoX7SMAghrGbUUoHssbU98KG2/social-images/social-1776675144386-IMG-20240421-WA0002.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RapLoX7SMAghrGbUUoHssbU98KG2/social-images/social-1776675144386-IMG-20240421-WA0002.webp" },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;500;600;700;800&display=swap",
+      },
+      { rel: "stylesheet", href: appCss },
+    ],
     scripts: [
       { src: "https://www.googletagmanager.com/gtag/js?id=AW-18106205849", async: true },
       {
