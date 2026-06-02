@@ -298,8 +298,8 @@ function TrustBar() {
                 <it.icon className="size-5 lg:size-6" />
               </div>
               <div>
-                <div className="font-display font-extrabold text-base lg:text-lg">{it.title}</div>
-                <div className="text-white/85 text-sm lg:text-base mt-0.5 lg:mt-1">{it.desc}</div>
+                <div className="font-display font-bold text-base lg:text-lg">{it.title}</div>
+                <div className="text-white/75 text-sm lg:text-base mt-0.5 lg:mt-1">{it.desc}</div>
               </div>
             </div>
           ))}
