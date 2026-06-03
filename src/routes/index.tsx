@@ -76,8 +76,8 @@ function Index() {
       <Header />
       <Hero />
       <Benefits />
-      <Services />
       <TrustBar />
+      <Services />
       <ContactForm />
       <Clients />
       <Footer />
