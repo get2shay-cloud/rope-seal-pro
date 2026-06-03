@@ -6,7 +6,6 @@ import {
   Zap,
   Target,
   Building2,
-  SquaresExclude,
   Hammer,
   Layers,
   BadgeCheck,
