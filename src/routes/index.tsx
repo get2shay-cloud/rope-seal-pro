@@ -175,7 +175,7 @@ function Hero() {
 
           <div className="mt-12 grid grid-cols-3 gap-5 max-w-sm">
             {[
-              { n: 100, l: "לקוחות מרוצים", suffix: "+", mode: "count" as const },
+              { n: 300, l: "לקוחות מרוצים", suffix: "+", mode: "count" as const },
               { n: 10, l: "שנות ניסיון", prefix: "+", mode: "count" as const },
               { n: 500, l: "בניינים", suffix: "+", mode: "count" as const },
             ].map((s) => (
