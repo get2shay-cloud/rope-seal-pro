@@ -258,7 +258,7 @@ function Services() {
             פתרון סופי לנזילות ורטיבות
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1.5 lg:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1.5 lg:gap-5">
           {services.map((s) => (
             <div
               key={s.title}
