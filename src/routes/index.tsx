@@ -6,7 +6,6 @@ import {
   Zap,
   Target,
   Building2,
-  SquaresExclude,
   Hammer,
   Layers,
   BadgeCheck,
@@ -246,7 +245,6 @@ function Benefits() {
 function Services() {
   const services = [
     { icon: Building2, title: "איטום קירות חיצוניים", desc: "טיפול יסודי בסדקים ובאזורי חדירת מים בקירות הבניין." },
-    { icon: SquaresExclude, title: "איטום חלונות ומסגרות", desc: "אטימת היקפי חלונות בסיליקון איכותי ומניעת חדירת רטיבות." },
     { icon: Hammer, title: "שיקום בטונים", desc: "תיקון בטון מתפורר, חשיפת סגרגציה, חידוש שכבת מגן ושימור הבניין." },
     { icon: Layers, title: "חיזוק חיפויי אבן", desc: "עיגון אריחים רופפים, איטום פוגות והגנה מנפילת חיפויים." },
   ];
@@ -259,7 +257,7 @@ function Services() {
             פתרון סופי לנזילות ורטיבות
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1.5 lg:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1.5 lg:gap-5">
           {services.map((s) => (
             <div
               key={s.title}
