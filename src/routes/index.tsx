@@ -2,8 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { AnimatedStat } from "@/components/AnimatedStat";
 import {
-  Droplets,
-  Zap,
   Target,
   Building2,
   Hammer,
