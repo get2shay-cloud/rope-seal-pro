@@ -76,10 +76,10 @@ function Index() {
       <Header />
       <Hero />
       <Benefits />
-      <TrustBar />
-      <Services />
-      <ContactForm />
       <Clients />
+      <Services />
+      <TrustBar />
+      <ContactForm />
       <Footer />
       <FloatingWhatsApp />
       <Toaster richColors position="top-center" dir="rtl" />
