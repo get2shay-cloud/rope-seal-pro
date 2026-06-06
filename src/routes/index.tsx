@@ -73,7 +73,6 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       <Header />
       <Hero />
-      <Benefits />
       <Clients />
       <Services />
       <TrustBar />
@@ -189,51 +188,6 @@ function Hero() {
   );
 }
 
-function Benefits() {
-  const items = [
-    {
-      icon: Zap,
-      title: "מהירות ביצוע",
-      desc: "הקמה מיידית של מערך עבודה ללא הקמת פיגומים. חוסכים שבועות של עבודה.",
-    },
-    {
-      icon: Droplets,
-      title: "חיסכון משמעותי",
-      desc: "ללא עלויות פיגומים, היתרים ושכירות ציוד כבד – חיסכון של עד 60% בעלות הפרויקט.",
-    },
-  ];
-  return (
-    <section className="py-10 lg:py-16 bg-secondary">
-      <div className="container mx-auto px-6">
-        <div className="max-w-2xl mb-6 lg:mb-10">
-          <div className="text-brand text-sm font-bold tracking-wider uppercase mb-3">היתרונות שלנו</div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl tracking-tight text-foreground">
-            למה סנפלינג הוא הפתרון הנכון?
-          </h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-1.5 lg:gap-5">
-          {items.map((it) => (
-            <div
-              key={it.title}
-              className="group relative bg-background rounded-2xl p-3.5 lg:p-6 shadow-card hover:shadow-elegant transition-smooth border border-border/60 flex items-start gap-3 lg:gap-4"
-            >
-              <div
-                className="shrink-0 size-11 lg:size-12 rounded-xl flex items-center justify-center text-brand-foreground"
-                style={{ background: "var(--gradient-brand)" }}
-              >
-                <it.icon className="size-6" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-lg lg:text-xl text-foreground mb-1.5 lg:mb-2">{it.title}</h3>
-                <p className="text-base text-muted-foreground leading-snug lg:leading-relaxed">{it.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Services() {
   const services = [
